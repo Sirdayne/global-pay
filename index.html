@@ -60,11 +60,45 @@
         left: 1px;
     }
     </style>
+    
+    <!-- FullPage Scrolls -->
+    <link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css" />
+    
+    <script src="js/jquery.min.js"></script>
+	<script src="js/jquery-ui.min.js"></script>
+	
+	<script type="text/javascript" src="vendors/jquery.slimscroll.min.js"></script>
+
+	<script type="text/javascript" src="js/jquery.fullPage.js"></script>
+	
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('#fullpage').fullpage({
+                scrollingSpeed: 800,
+				'onLeave': function(index, nextIndex, direction){
+					if (index == 1 && direction == 'down'){
+						$('.test').addClass('slideInRight');
+					}
+                    if (index == 2){
+						$('.test').removeClass('slideInRight');
+					}
+                    if (index == 3 && direction == 'up'){
+						$('.test').addClass('slideInRight');
+					}
+				}
+			});
+		});
+	</script>
 
 </head>
 
 <body>
 
+   
+<div id="fullpage">
+
+<div class="section fp-auto-height active" id="section0">
+   
     <header>
         <div class="header-line">
             <div class="header-left">   
@@ -92,49 +126,56 @@
         </div>
         
         <div class="header-title">
-           <p class="wow fadeInUp">Моментальные оплаты всего за 2 клика</p>
+           <p class="animated fadeInUp">Моментальные оплаты всего за 2 клика</p>
         </div>
         
         <div class="header-title-small">
-           <p class="wow fadeInUp" data-wow-delay=".2s">Удобство, скорость и безопасность - именно так о нас отзываются</p>
-            <p class="wow fadeInUp" data-wow-delay=".3s"><span>250</span> клиентов в астане</p>
+           <p class="animated fadeInUp" data-animated-delay=".2s">Удобство, скорость и безопасность - именно так о нас отзываются</p>
+            <p class="animated fadeInUp" data-animated-delay=".3s"><span>250</span> клиентов в астане</p>
         </div>
         
         <div class="header-title-button">
-           <button class="header-button wow fadeInUp" data-wow-delay=".4s"><p>Создать кошелек</p></button>
+           <button class="header-button animated fadeInUp" data-animated-delay=".4s"><p>Создать кошелек</p></button>
         </div>
         
-        <div class="header-image wow fadeInUp" data-wow-delay="1s">
+        <div class="header-image animated fadeInUp" data-animated-delay="1s">
             <img src="img/iphone.png" alt="">
         </div>
         
     </header>
     
+    </div>
+    
+    <div class="section fp-auto-height" id="section1">   
     <section id="section-2">
         <div class="section-2">
-            <div class="wow slideInRight">
+            <div class="animated test">
             <span>Удобство</span>
             <p>Оплачивайте счета в 2 клика напрямую с вашей карты и забудьте о пополнении вашего кошелька</p>
             </div>
         </div>
     </section>
+    </div>
     
+    <div class="section fp-auto-height" id="section2">
     <section id="section-2-2">
         <div class="section-2-2">
-            <div class="wow slideInLeft">
+            <div class="animated slideInLeft">
             <span>Скорость</span>
             <p>При оплате счета вам нужно будет назвать свой номер телефона и нажать 
             "оплатить" на экране телефона. Это займет еще меньше времени, чем поиск кошелька в сумке.</p>
             </div>
         </div>
     </section>
+    </div>
     
+    <div class="section fp-auto-height" id="section3">
     <section id="section-3">
         <div class="section-3-img">
-            <img src="img/section-3-iPhone.png" class="wow slideInLeft" alt="">
+            <img src="img/section-3-iPhone.png" class="animated slideInLeft" alt="">
         </div>
         <div class="section-3">
-            <div class="wow slideInRight">
+            <div class="animated slideInRight">
             <span>Безопасность</span>
             <p>Безопасность сервиса Global Pay подтверждена крупнейшим казахстанским 
             банком Казкоммерцбанк, который выступает гарантом надежности и прозрачности транзакций Global Pay.</p>
@@ -142,19 +183,23 @@
             </div>
         </div>
     </section>
+    </div>
     
+    <div class="section fp-auto-height" id="section4">
      <section id="section-4">
         <div class="section-4">
-            <div class="wow slideInLeft">
+            <div class="animated slideInLeft">
             <span>0% комиссии</span>
             <p>Забудьте о комиссиях при оплате, все транзакции через Global Pay проводятся без комиссии</p>
             </div>
         </div>
     </section>
+    </div>
     
+    <div class="section fp-auto-height" id="section5">
     <section id="section-5">
         <div class="section-5">
-            <div class="wow fadeIn">
+            <div class="animated fadeIn">
             <span>100% казахстанский продукт</span>
             <div class="section-5-space"></div>
             <div class="section-5-line"></div>
@@ -165,10 +210,12 @@
         </div>
         <div class="section-5-img"></div>
     </section>
+    </div>
     
+    <div class="section fp-auto-height" id="section6">
     <section id="section-6">
         <div class="section-6">
-            <div class="wow slideInLeft">
+            <div class="animated slideInLeft">
             <span>Станьте партнером&nbsp</span>
             <span>Global Pay</span>
             <p>Принимайте безналичные платежи без POS-терминала совершенно бесплатно! 
@@ -190,7 +237,7 @@
             </div>
         </div>
         <div class="section-6-map">
-            <div class="wow slideInRight">
+            <div class="animated slideInRight">
             <div class="section-6-buttons">
                 <button class="restaraunts-button">
                     <span>Рестораны</span>
@@ -203,7 +250,9 @@
         </div>
         </div>
     </section>
+    </div>
     
+    <div class="section fp-auto-height" id="section7">
      <section id="section-7">
         <div class="section-7">
             <span>Подайте заявку на подключение к Global Pay</span>
@@ -213,7 +262,9 @@
             </div>
         </div>
     </section>
+    </div>
     
+    <div class="section fp-auto-height" id="section8">
     <footer>
         <div class="footer">
             <div class="footer-left">
@@ -261,9 +312,10 @@
             </div>
         </div>
     </footer>
+    </div>
+
+    </div>
     
-    
-	<script src="js/jquery.min.js"></script>
 	<script src="js/maskedinput.js"></script>
 	<script type="text/javascript">
 		
@@ -286,8 +338,10 @@
     });
     </script>
     
-    <script src="js/wow.min.js"></script>
-    <script>new WOW().init();</script>
-
+    <!--
+    <script src="js/animated.min.js"></script>
+    <script>new animated().init();</script>
+    -->
+    
 </body>
 </html>

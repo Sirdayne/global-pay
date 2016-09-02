@@ -1,8 +1,29 @@
+.fp-tableCell{
+    float: left;
+}
+/*
+html{
+    height: 100%;
+}
+body{
+    height: 100%;
+}
+#fullpage{
+    height: 100%;
+}
+*/
+.section{
+    float: left;
+    height: 100%;
+    width: 100%;
+}
+
 /* HEADER */
 button{
     border: none;
     cursor: pointer;
     transition: .2s ease-in;
+    outline: none;
 }
 button:hover{
     color: #267df4; 
@@ -251,7 +272,7 @@ header{
 .section-5{
     float: left;
     width: 100%;
-    margin-top: 230px;
+    margin-top: 130px;
     margin-bottom: 30px;
     color: #8c8f94;
     text-align: center;
