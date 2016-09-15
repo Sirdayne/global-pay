@@ -74,7 +74,7 @@
 	<script type="text/javascript">
 		$(document).ready(function() {
 			$('#fullpage').fullpage({
-                scrollingSpeed: 800,
+                scrollingSpeed: 1000,
 				'onLeave': function(index, nextIndex, direction){
 					if (index == 1 && direction == 'down'){
 						$('.test').addClass('slideInRight');
@@ -97,9 +97,11 @@
    
 <div id="fullpage">
 
-<div class="section fp-auto-height active" id="section0">
+<!-- fp = fp-auto-height check -->
+
+<div class="section active" id="section0">
    
-    <header>
+    <header class="header">
         <div class="header-line">
             <div class="header-left">   
                 <div class="header-burger">
@@ -146,7 +148,7 @@
     
     </div>
     
-    <div class="section fp-auto-height" id="section1">   
+    <div class="section fp" id="section1">   
     <section id="section-2">
         <div class="section-2">
             <div class="animated test">
@@ -157,7 +159,7 @@
     </section>
     </div>
     
-    <div class="section fp-auto-height" id="section2">
+    <div class="section fp" id="section2">
     <section id="section-2-2">
         <div class="section-2-2">
             <div class="animated slideInLeft">
@@ -169,7 +171,7 @@
     </section>
     </div>
     
-    <div class="section fp-auto-height" id="section3">
+    <div class="section fp" id="section3">
     <section id="section-3">
         <div class="section-3-img">
             <img src="img/section-3-iPhone.png" class="animated slideInLeft" alt="">
@@ -185,7 +187,7 @@
     </section>
     </div>
     
-    <div class="section fp-auto-height" id="section4">
+    <div class="section fp" id="section4">
      <section id="section-4">
         <div class="section-4">
             <div class="animated slideInLeft">
@@ -196,7 +198,7 @@
     </section>
     </div>
     
-    <div class="section fp-auto-height" id="section5">
+    <div class="section fp" id="section5">
     <section id="section-5">
         <div class="section-5">
             <div class="animated fadeIn">
@@ -208,51 +210,55 @@
             <p>а также помогаете улучшить и ускорить обслуживание всем партнерам нашего сервиса</p>
             </div>
         </div>
-        <div class="section-5-img"></div>
+        <div class="section-5-img">
+            <img src="./img/Background-5.png" alt="">
+        </div>
     </section>
     </div>
     
-    <div class="section fp-auto-height" id="section6">
+    <div class="section fp" id="section6">
     <section id="section-6">
-        <div class="section-6">
-            <div class="animated slideInLeft">
-            <span>Станьте партнером&nbsp</span>
-            <span>Global Pay</span>
-            <p>Принимайте безналичные платежи без POS-терминала совершенно бесплатно! 
-            Получите доступ к детальной аналитике вашего бизнеса и маркетинговым 
-            инструментам Global Pay уже сегодня. Внедрение новой системы оплат займет у вас всего несколько часов.</p>
-            <div class="section-6-partners">
-                <p>ПАРТНЕРЫ</p>
-                <div class="swiper-container">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide"><img src="./img/partner-helios.png" alt=""></div>
-                        <div class="swiper-slide"><img src="./img/partner-helios.png" alt=""></div>
-                        <div class="swiper-slide"><img src="./img/partner-helios.png" alt=""></div>
+        <div class="section-6-out">     
+            <div class="section-6">
+                <div class="animated slideInLeft">
+                <span>Станьте партнером&nbsp</span>
+                <span>Global Pay</span>
+                <p>Принимайте безналичные платежи без POS-терминала совершенно бесплатно! 
+                Получите доступ к детальной аналитике вашего бизнеса и маркетинговым 
+                инструментам Global Pay уже сегодня. Внедрение новой системы оплат займет у вас всего несколько часов.</p>
+                <div class="section-6-partners">
+                    <p>ПАРТНЕРЫ</p>
+                    <div class="swiper-container">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide"><img src="./img/partner-helios.png" alt=""></div>
+                            <div class="swiper-slide"><img src="./img/partner-helios.png" alt=""></div>
+                            <div class="swiper-slide"><img src="./img/partner-helios.png" alt=""></div>
+                        </div>
+                        <!-- Add Arrows -->
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
                     </div>
-                    <!-- Add Arrows -->
-                    <div class="swiper-button-next"></div>
-                    <div class="swiper-button-prev"></div>
-                </div>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="section-6-map">
-            <div class="animated slideInRight">
-            <div class="section-6-buttons">
-                <button class="restaraunts-button">
-                    <span>Рестораны</span>
-                    <div class="restaraunts-button-line-1"></div>
-                    <div class="restaraunts-button-line-2"></div>
-                </button>
-                <button class="open-map-button">Открыть карту</button>
+            <div class="section-6-map">
+                <div class="animated slideInRight">
+                <div class="section-6-buttons">
+                    <button class="restaraunts-button">
+                        <span>Рестораны</span>
+                        <div class="restaraunts-button-line-1"></div>
+                        <div class="restaraunts-button-line-2"></div>
+                    </button>
+                    <button class="open-map-button">Открыть карту</button>
+                </div>
+                <img src="img/map.png" alt="">
             </div>
-            <img src="img/map.png" alt="">
-        </div>
+            </div>
         </div>
     </section>
     </div>
-    
-    <div class="section fp-auto-height" id="section7">
+    <!--
+    <div class="section fp" id="section7">
      <section id="section-7">
         <div class="section-7">
             <span>Подайте заявку на подключение к Global Pay</span>
@@ -263,8 +269,15 @@
         </div>
     </section>
     </div>
-    
-    <div class="section fp-auto-height" id="section8">
+    -->
+    <div class="section fp" id="section-8">
+    <div class="section-7">
+        <span>Подайте заявку на подключение к Global Pay</span>
+        <div class="section-7-border">
+            <input type="text" id="client-tel-for-consult" placeholder="Ваш телефон">
+            <button class="section-7-button">Отправить</button>
+        </div>
+    </div>
     <footer>
         <div class="footer">
             <div class="footer-left">
